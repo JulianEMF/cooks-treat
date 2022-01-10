@@ -1,0 +1,48 @@
+.header{
+    box-sizing: border-box;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition-duration: 2s;
+}
+
+.logo-container{
+    width: 8rem;
+    height: 8rem;
+}
+
+.logo-container img{
+    width: 100%;
+}
+
+.message-container{
+    width: 80vw;
+    max-height: 8rem;
+}
+
+.message{
+    font-family: "Times New Roman";
+    font-size: 150%;
+    text-align: center;
+    color: #0b3f0b;
+    word-wrap: normal;
+}
+
+.hide-text{
+    font-size: 0;
+    text-align: center;
+    color: #0b3f0b;
+    font-family: "Times New Roman";
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+@keyframes example {
+    from {
+        font-size: 2rem;
+    }
+    to {
+        font-size: 0;
+    }
+  }
