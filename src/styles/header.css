@@ -19,6 +19,8 @@
 .message-container{
     width: 80vw;
     max-height: 8rem;
+    overflow: hidden;
+    margin: 3rem 0;
 }
 
 .message{
@@ -27,6 +29,7 @@
     text-align: center;
     color: #0b3f0b;
     word-wrap: normal;
+    
 }
 
 .hide-text{

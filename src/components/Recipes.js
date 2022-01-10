@@ -76,7 +76,6 @@ const Recipes = ({ messageHandler }) => {
                 setTotalResults(response.data.count);  
                 setNoResults(false);
                 messageHandler(false);
-                console.log(response.data.results)
             }else{
                 setLoading(false);
                 setNoResults(true);

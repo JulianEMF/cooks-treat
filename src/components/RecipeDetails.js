@@ -13,35 +13,34 @@ const RecipeDetails = ({ details, clicked, closeDetails }) => {
                 handler();
               }
             };
-        
             document.addEventListener("mousedown", onClickHandler);
-        
             return () => {
               document.removeEventListener("mousedown", onClickHandler);
             };
         });
-        
         return detailsContainer;
-        };
+    };
 
     let detailsContainer = useClickOutside(() => {
         closeDetails();
     });
 
     if(clicked){
-        console.log(details)
         return(
             <div ref={detailsContainer} className="recipe-details" > 
                 <div className="close-button-container" >
                     <img src={cross} alt="Close Button" onClick={closeDetails}/>
                 </div>
                 <h1>{details.name}</h1>
-                <div className="image-details-container">
-                    <img src={details.thumbnail_url} url={details.name} />
+                <div className="details-container">
+                    <div className="image-details-container">
+                        <img src={details.thumbnail_url} url={details.name} />
+                    </div>
+                    <div className="small-details-container">
+                        <p className="small-detail">{details.yields}</p>
+                        <p className="small-detail">Time estimate: {details.total_time_tier ? details.total_time_tier.display_tier: null}</p>
+                    </div>
                 </div>
-                <p className="small-detail">{details.yields}</p>
-                <p className="small-detail">Time estimate: {details.total_time_tier ? details.total_time_tier.display_tier: null}</p>
-
                 <div className="details-section">
                     <h2 className="details-title">Ingredients</h2>
                     {details.sections[0].components.map(item => {

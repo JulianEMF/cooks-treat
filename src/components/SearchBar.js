@@ -1,9 +1,9 @@
-import SearchLogo from '../images/search-logo.svg';
+import SearchIcon from '../images/search-icon.svg';
 
 const SearchBar = ( {handleSubmit, handleChange }) => {
     return(
         <div className='input-container'>
-            <img className="search-logo" src={SearchLogo} alt="Search logo"/>
+            <img className="search-logo" src={SearchIcon} alt="Search Icon"/>
             <form onSubmit={handleSubmit}>
                 <input type="text" onChange={handleChange}/>
             </form>

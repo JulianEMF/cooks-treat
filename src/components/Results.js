@@ -23,7 +23,7 @@ const Results = ( {results, moreRecipes, onShowDetails, totalResults, noResults,
                     return(
                         <div key={recipe.id} className='recipe-card' onClick={onShowDetails} id={recipe.id}>
                             <div id ={recipe.id} className='image-container'>
-                                <img src={recipe.thumbnail_url} />
+                                <img src={recipe.thumbnail_url} alt={recipe.name}/>
                             </div>
                             <h4>{recipe.name}</h4>
                             <p className='description'>{recipe.description ? recipe.description : recipe.total_time_tier ? recipe.total_time_tier.display_tier : null}</p>

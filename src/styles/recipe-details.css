@@ -21,6 +21,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
+    margin-bottom: 1rem;
 }
 
 .close-button-container img{
@@ -34,10 +35,24 @@ h1{
     margin-top: 0;
 }
 
-.image-details-container{
-    width: 100%;
+.details-container{
     display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.small-details-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
     justify-content: center;
+    margin-left: 2rem;
+}
+
+.image-details-container{
+    width: 10rem;
+    display: flex;
+    justify-content: left;
 }
 
 .image-details-container img{
