@@ -20,7 +20,6 @@
     width: 80vw;
     max-height: 8.5rem;
     overflow: hidden;
-    margin: 3rem 0;
 }
 
 .message{
@@ -28,8 +27,7 @@
     font-size: 150%;
     text-align: center;
     color: #0b3f0b;
-    word-wrap: normal;
-    
+    word-wrap: normal; 
 }
 
 .hide-text{
