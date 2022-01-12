@@ -89,7 +89,7 @@ h1{
 @media screen and (max-width: 700px){
     .recipe-details{
         width: 90vw;
-        padding: 0.5rem;
+        padding:1rem;
     }
 
     .close-button-container{
