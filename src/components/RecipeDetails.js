@@ -34,11 +34,11 @@ const RecipeDetails = ({ details, clicked, closeDetails }) => {
                 <h1>{details.name}</h1>
                 <div className="details-container">
                     <div className="image-details-container">
-                        <img src={details.thumbnail_url} url={details.name} />
+                        <img src={details.thumbnail_url} alt={details.name} url={details.name} />
                     </div>
                     <div className="small-details-container">
                         <p className="small-detail">{details.yields}</p>
-                        <p className="small-detail">Time estimate: {details.total_time_tier ? details.total_time_tier.display_tier: null}</p>
+                        <p className="small-detail">Time estimate: {details.total_time_tier && details.total_time_tier.display_tier}</p>
                     </div>
                 </div>
                 <div className="details-section">
@@ -46,7 +46,7 @@ const RecipeDetails = ({ details, clicked, closeDetails }) => {
                     {details.sections[0].components.map(item => {
                         return(
                             <div key={item.id}>
-                                <span className="item-text">{item.measurements[0].quantity != 0 ? item.measurements[0].quantity : null} </span>
+                                <span className="item-text">{item.measurements[0].quantity !== 0 && item.measurements[0].quantity} </span>
                                 <span className="item-text">{item.measurements[0].quantity > 1 ? item.measurements[0].unit.display_plural : item.measurements[0].unit.display_singular} </span>
                                 <span className="item-text">{item.ingredient.name}</span>
                             </div>

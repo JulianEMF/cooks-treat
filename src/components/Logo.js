@@ -1,10 +1,10 @@
 import '../styles/header.css';
 import logo from '../images/logo.png';
 
-const Logo = () => {
+const Logo = ({ blurContent }) => {
     return(
-        <div className="logo-container">
-            <img src={logo} alt="Logo" />
+        <div className='logo-container'>
+            <img className={blurContent ? 'blur' : ''} src={logo} alt="Logo" />
         </div>
     )
 }

@@ -1,22 +1,28 @@
 import { useState } from 'react';
-import '../styles/App.css';
 import Logo from './Logo';
 import IntroMessage from './IntroMessage';
 import Recipes from './Recipes';
+import '../styles/App.css';
+
 
 const App = () => {
 
   const [visibleMessage, setVisibleMessage] = useState(true);
+  const [blurContent, setBlurContent] = useState(true);
 
   const messageHandler = (value) => {
     setVisibleMessage(value);
   }
 
+  const blurHandler = (value) => {
+    setBlurContent(value);
+  }
+
   return (
     <div className="App">
-      <Logo />
+      <Logo blurContent={blurContent}/>
       <IntroMessage visible={visibleMessage}/> 
-      <Recipes messageHandler={messageHandler}/>
+      <Recipes messageHandler={messageHandler} blurHandler={blurHandler}/>
     </div>
   );
 }
